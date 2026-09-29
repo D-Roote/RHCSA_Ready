@@ -181,10 +181,10 @@ curl http://172.25.250.10:82/file1
 
 </details>
 
-> 시험에서는 `/var/www/html`의 `file1`의 fcontext가 잘못 적용되어 있어 `curl`이 정상 수행되지 않았음.
-> `/var/www/html`은 기본 HTTP 콘텐츠 경로이므로 보통 `restorecon`만으로 올바른 타입이 복구된다.
-> `semanage fcontext -a`는 사용자 지정 경로처럼 기본 라벨 규칙이 없는 경우에만 추가한다.
-> `semanage fcontext -a -t http_sys_content_t "/var/www/html(/.*)?"`
+> 시험에서는 `/var/www/html`의 `file1`의 fcontext가 잘못 적용되어 있어 `curl`이 정상 수행되지 않았음.  
+> `/var/www/html`은 기본 HTTP 콘텐츠 경로이므로 보통 `restorecon`만으로 올바른 타입이 복구된다.  
+> `semanage fcontext -a`는 사용자 지정 경로처럼 기본 라벨 규칙이 없는 경우에만 추가한다.  
+> `semanage fcontext -a -t http_sys_content_t "/var/www/html(/.*)?"`  
 
 ---
 
